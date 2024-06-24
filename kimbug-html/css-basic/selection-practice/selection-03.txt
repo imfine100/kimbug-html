@@ -1,0 +1,28 @@
+1. CSS 우선순위
+
+(1) 동일한 태그에 적용 시, 가장 마지막 CSS가 적용된다
+
+p {
+    color : yellow;
+}
+
+p {
+    color : pink;
+}
+
+=> pink로 적용됨
+
+2. 적용 순위(금 > 은 > 동)
+ID > Class, Pseudo-class > Type
+
+3. 예외적용
+
+  (1) Inline style : 가장 우선으로 적용됨
+
+   <p style="color:blue" > hannah </p>
+
+   (2) !important : Inline style 보다도 우선으로 적용됨
+
+   * {
+      color : hotpink !important
+    }

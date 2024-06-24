@@ -1,0 +1,67 @@
+
+/*
+Red     #ff4949
+Yellow  #ffc82c
+Blue    #0066ff
+Green   #295851
+*/
+
+/* section h1 {
+    color :#0066ff;
+}
+
+section > h1 {
+    color : #ff4949;
+}
+
+
+.active{
+    font-weight: 700;
+}
+
+.active ~ li {
+    color: #0066ff;
+}
+
+.active + li {
+    color: #ff4949;
+}
+ 
+
+li:first-child {
+    color: #ffc82c;
+}
+
+li:last-child {
+    color: #295851;
+    font-weight: 700;
+}
+
+li:nth-child(2n) {
+    font-weight: 900 ;
+    color:aquamarine;
+}
+
+li:nth-child(2n-1) {
+    font-weight: 200 ;
+    color:#ff4949;
+}
+    */
+
+
+a:hover {
+    background-color: #7e5bef;
+}
+
+a:active {
+    background-color: #592def;
+}
+
+input {
+    outline: none;
+    box-shadow: none;
+}
+
+input:focus {
+    border-color: #1fb6ff;
+}

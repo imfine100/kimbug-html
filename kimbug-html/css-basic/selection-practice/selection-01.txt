@@ -1,0 +1,117 @@
+
+1. CSS 기본 문법
+
+selector {
+    property : value;
+}
+
+여러개 나열할 때는 반드시 value 뒤에 ; 꼭 넣어줘야함( 콤마 대신 )
+
+2. 요소, 클래스, ID 선택자(Type, Class&ID Selector)
+
+(1) type
+h1 {
+    property : value;
+}
+
+=> 해당 html 전체 선택됨
+
+
+(2) class
+<div class="box1 box2 box3">
+</div>
+=> class 표기할 떄는 공백으로 띄워서 적어줌. (붙으면 하나의 class로 인식함)
+
+
+.box1.box2.box3 {
+   property : value;
+}
+=> ~ 이자 ~ 이자 ~ 이자... 라고 쓰려면 붙여서 표기하면됨!! 떨어뜨리면 완전히 다른 의미
+
+(3) id
+<div id="hannah">
+</div>
+
+#hannah {
+    color : red;
+}
+
+
+3. 자식, 자손, 형제 선택자(Child, Descendant, Sibling Combinators)
+
+(1) Child Combinator
+
+[표기방법] 꺽쇠(>)
+Parent > Child
+
+(2) Descendant Combinator
+
+[표기방법] 공백
+Parent Descendant
+
+
+
+<body>
+    <section>
+        <h1>hannah</h1>
+        <ul>
+            <li>
+                <h1>habbit</h1>
+                <p>reading, writting, sleeping...</p>
+            </li>
+            <li></li>
+        </ul>
+    </section>
+</body>
+
+
+#CSS
+section h1 {
+    color : blue
+}
+
+=> hannah, habbit 파랗게 바뀜
+
+section > h1 {
+    color : red
+}
+
+=> hannah 만 빨갛게 바뀜
+
+
+(3) Sibling Combinators
+
+[표기방법] + 또는 ~
+Sibling + Sibling : Sibling 바로 뒤의 요소
+Sibling ~ Sibling : Sibling 다음으로 오는 형제 쭉!
+
+
+<body>
+    <section>
+        <h1>Sibling Combinators</h1>
+        <ol>
+            <li>Do something</li>
+            <li class="active">Do something else</li>
+            <li>Create something</li>
+            <li>Create something else</li>
+            <li>Make something</li>
+            <li>Make something else</li>
+        </ol>
+    </section>
+</body>
+
+
+
+
+
+#CSS
+.active ~ li {
+    color: #0066ff;
+}
+
+.active + li {
+    color: #ff4949;
+}
+
+
+

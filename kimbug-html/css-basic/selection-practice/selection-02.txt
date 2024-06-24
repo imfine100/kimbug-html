@@ -1,0 +1,90 @@
+1.Structural Pseudo-classes 구조적 가상 클래스 선택자
+=> id나 class를 지정하지 않고도 요소에 CSS 부여가능하게 해줌
+
+
+<section>
+      <h1>Structural Pseudo-classes</h1>
+      <ol>
+        <li>Do something</li>
+        <li>Do something else</li>
+        <li>Create something</li>
+        <li>Create something else</li>
+        <li>Make something</li>
+        <li>Make something else</li>
+      </ol>
+    </section>
+
+
+(1) first-child : 첫번째 자식요소를 가리킬 때 사용
+
+li :first-child {
+    color: #ffc82c;
+}
+
+
+
+(2) list-child : 마지막 자식요소를 가리킬 때 사용
+
+li :last-child {
+    color: #295851;
+    font-weight: 700;
+}
+
+
+(3) nth-child : n번째 요소 가리킬 때 사용
+
+
+li:nth-child(3) {
+    font-weight: 900 ;
+    color:aquamarine;
+}
+
+
+[짝수, 홀수 표기 ]
+li:nth-child(2n) {
+    font-weight: 900 ;
+    color:aquamarine;
+}
+
+li:nth-child(2n-1) {
+    font-weight: 200 ;
+    color:#ff4949;
+}
+
+
+2. User Action Pseudo-classes 동적 가상 클래스 선택자 
+
+
+ <section>
+        <h1>User Action Pseudo-classes</h1>
+        <a href="#">Kimbug Youtube Channel</a>
+        <input type="email" placeholder="Enter your email">
+ </section>
+
+
+(1) :hover : 마우스 올리면 깜빡 거리도록 표시
+
+a:hover {
+    background-color: #7e5bef;
+}
+
+(2) :active : 마우스 클릭하면 효과 발생하도록 표시
+
+a:active {
+     background-color: #592def;
+}
+
+(3) :focus : 선택 시 효과가 발생하도록 표시
+
+
+input:focus {
+    border-color: #1fb6ff;
+}
+
+
+[소소한 팁] 인풋 박스 라인 정리할때 쓰세용
+input {
+    outline: none;
+    box-shadow: none;
+}
+
